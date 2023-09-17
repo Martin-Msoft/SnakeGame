@@ -2,7 +2,19 @@
 {
     enum SnakeDirection
     {
-        Left, Right, Up, Down
+        Left,
+        Right,
+        Up,
+        Down
     }
+
+    public enum CellType
+    {
+        Empty,
+        Wall,
+        Food,
+        Snake
+    }
+
 
 }

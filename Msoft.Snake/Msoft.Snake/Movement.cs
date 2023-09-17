@@ -12,31 +12,31 @@
         public (int x, int y) MoveSnake()
         {
             UpdateDirection();
-            return GetNewCoordinates();
+            return GetNewDirection();
         }
 
-        private (int x, int y) GetNewCoordinates()
+        private (int x, int y) GetNewDirection()
         {
-            (int x, int y) coordinates;
+            (int x, int y) direction;
             switch (_direction)
             {
                 case SnakeDirection.Left:
-                    coordinates = (-1, 0);
+                    direction = (0, -1);
                     break;
                 case SnakeDirection.Right:
-                    coordinates = (1, 0);
+                    direction = (0, 1);
                     break;
                 case SnakeDirection.Up:
-                    coordinates = (0, -1);
+                    direction = (-1, 0);
                     break;
                 case SnakeDirection.Down:
-                    coordinates = (0, 1);
+                    direction = (1, 0);
                     break;
                 default:
-                    coordinates = (0, 0);
+                    direction = (0, 0);
                     break;
             }
-            return coordinates;
+            return direction;
         }
 
         private void UpdateDirection()

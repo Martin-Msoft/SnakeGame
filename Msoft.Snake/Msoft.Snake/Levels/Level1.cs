@@ -27,20 +27,20 @@ namespace Msoft.Snake.Levels
             //Something unique for this map
         }
 
-        public string[,] GetMap()
+        public CellType[,] GetMap()
         {
-            var map = new string[Height, Width];
+            var map = new CellType[Height, Width];
             for (int x = 0; x < Height; x++)
             {
                 for (int y = 0; y < Width; y++)
                 {
                     if (x == 0 || x == Height - 1 || y == 0 || y == Width - 1)
                     {
-                        map[x, y] = "#";
+                        map[x, y] = CellType.Wall;
                     }
                     else
                     {
-                        map[x, y] = " ";
+                        map[x, y] = CellType.Empty;
                     }
                 }
             }

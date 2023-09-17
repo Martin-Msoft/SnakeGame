@@ -4,10 +4,10 @@ namespace Msoft.Snake.Levels
 {
     public interface ILevel
     {
-        public int Height { get; }
-        public int Width { get; }
-        public List<Point> SnakeStartingPoint { get; }
-        public int InitialSnakeLength { get; }
-        public string[,] GetMap();
+        int Height { get; }
+        int Width { get; }
+        List<Point> SnakeStartingPoint { get; }
+        int InitialSnakeLength { get; }
+        CellType[,] GetMap();
     }
 }
